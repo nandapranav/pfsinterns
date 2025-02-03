@@ -40,7 +40,7 @@ nav {
     z-index: 1000;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     border-bottom: 3px solid rgba(106, 17, 203, 0.8);
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -166,5 +166,96 @@ nav a:hover::after {
         align-items: center;
         gap: 1rem;
         padding: 0.5rem;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid rgba(106, 17, 203, 0.8);
+    box-sizing: border-box;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2575fc;
+}
+
+
+
+
+
+
+/* Sections */
+section {
+    padding: 6rem 10%;
+    text-align: left;
+    border-bottom: 5px solid #6a11cb;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out;
+}
+
+#contact a:hover {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+/* Responsive Navbar */
+#hamburger-menu {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    nav.open {
+        display: flex;
     }
 }
